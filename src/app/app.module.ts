@@ -3,10 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NavbarComponent } from './pages/_components/navbar/navbar.component';
+import { FooterComponent } from './pages/_components/footer/footer.component';
+import { BaseUiComponent } from './pages/_components/base-ui/base-ui.component';
+import { UsersComponent } from './pages/users/users.component';
+import { UserComponent } from './pages/user/user.component';
+import { UserCardComponent } from './pages/user-card/user-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent,
+    BaseUiComponent,
+    UsersComponent,
+    UserComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
