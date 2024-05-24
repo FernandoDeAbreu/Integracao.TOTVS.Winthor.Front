@@ -1,12 +1,37 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../_models/user';
+import { UserService } from '../../_services/user.service';
+import { UserGit } from '../_models/userGit';
+import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit{
-  ngOnInit(): void {
+export class HomeComponent  {
+user : UserGit | undefined;
+username: string = '';
+  constructor(
+    private userService : UserService,
+    private toastr : ToastrService
 
+  ){}
+
+  getGitUser(){
+    if(this.username.length == 0){
+      this.toastr.error('O campo user e obrigatorio');
+      return;
+    }
+    this.userService.getGitUser(this.username).subscribe(
+      (reponse : UserGit) => {
+      this.user = reponse;
+      },
+      (error) =>{
+      this.toastr.error(error.error.message);
+      }
+   );
   }
 }
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../_models/user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../_services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -14,7 +15,7 @@ export class UsersComponent implements OnInit{
  userSeleciona: User | undefined;
  userForm: FormGroup = new FormGroup({});
 
-constructor(private fb : FormBuilder){}
+constructor(private fb : FormBuilder, private userServices : UserService){}
   ngOnInit(): void {
     this.initilizeForm();
   }
@@ -53,6 +54,7 @@ SubmitFrom(){
   }
  ];
  infoUserSelecionado(user: User){
-this.userSeleciona = user;
+   this.userSeleciona = user;
+   this.userServices.setUser(user);
  }
 }
