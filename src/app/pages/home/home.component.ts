@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../_models/user';
 import { UserService } from '../../_services/user.service';
-import { UserGit } from '../_models/userGit';
+import { UserGit } from '../../_models/userGit';
 import { ToastrService } from 'ngx-toastr';
-import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',

@@ -16,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { ConsultaPrecoComponent } from './pages/consulta-preco/consulta-preco.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     BaseUiComponent,
     UsersComponent,
     UserComponent,
-    UserCardComponent
+    UserCardComponent,
+    ConsultaPrecoComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { User } from '../pages/_models/user';
+import { User } from "../_models/user";
 import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
-import { UserGit } from '../pages/_models/userGit';
+import { UserGit } from '../_models/userGit';
 
 @Injectable({
   providedIn: 'root'
